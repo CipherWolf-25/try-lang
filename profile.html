@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile — MENSIFY</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile">
+
+<div id="site-header"></div>
+
+<div class="page-banner">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Profile</div>
+    <h1>My Account</h1>
+  </div>
+</div>
+
+<main class="section-tight">
+  <div class="container profile-layout">
+    <div class="profile-side">
+      <div class="profile-avatar" id="avatarCircle">
+        <span id="avatarInitials">--</span>
+        <label class="avatar-edit" for="avatarInput" style="cursor:pointer;">Change Photo</label>
+        <input type="file" id="avatarInput" accept="image/*" style="display:none;">
+      </div>
+      <h3 id="profileName" style="font-family:var(--font-display);font-size:22px;text-transform:uppercase;margin:0;">—</h3>
+      <p class="muted" id="profileEmail" style="font-size:12.5px;">—</p>
+      <div class="profile-nav">
+        <button class="active" data-panel="info">Personal Info</button>
+        <button data-panel="addresses">Addresses</button>
+        <button data-panel="orders">Order History</button>
+        <button data-panel="security">Security</button>
+        <button id="logoutBtn" style="color:var(--danger);">Log Out</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="profile-panel active" id="panel-info">
+        <h3 class="section-title" style="font-size:26px;margin-bottom:20px;">Personal Information</h3>
+        <form id="infoForm">
+          <div class="field-row">
+            <div class="field"><label>First Name</label><input type="text" id="pFirstName" required></div>
+            <div class="field"><label>Last Name</label><input type="text" id="pLastName" required></div>
+          </div>
+          <div class="field"><label>Username</label><input type="text" id="pUsername" required></div>
+          <div class="field"><label>Email</label><input type="email" id="pEmail" required></div>
+          <div class="field"><label>Phone Number</label><input type="tel" id="pPhone"></div>
+          <button class="btn btn-primary" type="submit">Save Changes</button>
+        </form>
+      </div>
+
+      <div class="profile-panel" id="panel-addresses">
+        <h3 class="section-title" style="font-size:26px;margin-bottom:20px;">Saved Addresses</h3>
+        <div id="addressList"></div>
+        <form id="addressForm" style="margin-top:20px;border-top:1px solid var(--line-soft);padding-top:20px;">
+          <div class="field-row">
+            <div class="field"><label>Street Address</label><input type="text" id="aStreet" required></div>
+            <div class="field"><label>City</label><input type="text" id="aCity" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Province</label><input type="text" id="aProvince" required></div>
+            <div class="field"><label>ZIP Code</label><input type="text" id="aZip" required></div>
+          </div>
+          <button class="btn btn-outline" type="submit">Add Address</button>
+        </form>
+      </div>
+
+      <div class="profile-panel" id="panel-orders">
+        <h3 class="section-title" style="font-size:26px;margin-bottom:20px;">Order History</h3>
+        <div id="orderHistoryList"></div>
+      </div>
+
+      <div class="profile-panel" id="panel-security">
+        <h3 class="section-title" style="font-size:26px;margin-bottom:20px;">Change Password</h3>
+        <form id="passwordForm">
+          <div class="field"><label>Current Password</label><input type="password" id="curPass" required></div>
+          <div class="field"><label>New Password</label><input type="password" id="newPass" required></div>
+          <div class="field"><label>Confirm New Password</label><input type="password" id="confNewPass" required></div>
+          <button class="btn btn-primary" type="submit">Update Password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/product-images.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

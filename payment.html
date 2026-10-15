@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Processing Payment — MENSIFY</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="payment">
+
+<div id="site-header"></div>
+
+<main class="section">
+  <div class="container">
+
+    <div id="processingView" class="processing-screen">
+      <div class="spinner"></div>
+      <h2 class="h-display" style="font-size:30px;">Processing your payment…</h2>
+      <p class="muted">Please don't close this window. This will only take a moment.</p>
+    </div>
+
+    <div id="successView" style="display:none;">
+      <div class="text-center" style="margin-bottom:36px;">
+        <div class="success-check">✓</div>
+        <h1 class="h-display" style="font-size:44px;">Payment Successful</h1>
+        <p class="muted">Thank you for shopping with MENSIFY. A confirmation has been recorded to your account.</p>
+      </div>
+
+      <div class="receipt-card" id="receiptCard"></div>
+
+      <div class="text-center" style="margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn btn-outline" id="downloadReceiptBtn">Download Receipt</button>
+        <a href="orders.html" class="btn btn-dark">View My Orders</a>
+        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/product-images.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENSIFY — The Men's Collection</title>
+<meta name="description" content="Premium menswear: tees, hoodies, denim, sneakers, watches and accessories. Shop the new drop at MENSIFY.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<div id="site-header"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Autumn / Winter Collection</span>
+        <h1 class="hero-title">Dress<br><em>Deliberate.</em></h1>
+        <p>Menswear built on clean construction, honest fabrics and a fit that holds up from the first wear to the hundredth. No noise — just the pieces you'll actually reach for.</p>
+        <div class="hero-cta">
+          <a href="shop.html" class="btn btn-primary">Shop The Collection</a>
+          <a href="shop.html#new" class="btn btn-outline-light">New Arrivals</a>
+        </div>
+        <div class="hero-stats">
+          <div><b id="statProducts">60+</b><span>Products</span></div>
+          <div><b>14</b><span>Categories</span></div>
+          <div><b>4.7</b><span>Avg. Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-swatch">
+          <span class="glyph">MF</span>
+          <img class="prod-img" src="https://loremflickr.com/700/900/mens,fashion,jacket?lock=101" alt="Featured field jacket" loading="lazy" onerror="handleImgError(this)" style="border-radius:var(--radius-lg);">
+          <div class="hero-tagfloat">
+            <span>Featured Piece</span>
+            <b>Field Jacket — ₱899.00</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section-tight" id="categories">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Browse</span>
+          <h2 class="section-title">Shop by Category</h2>
+        </div>
+      </div>
+      <div class="cat-strip" id="categoryStrip"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Curated</span>
+          <h2 class="section-title">Featured Products</h2>
+          <p>Hand-picked pieces our editors keep coming back to this season.</p>
+        </div>
+        <a href="shop.html" class="btn btn-outline">View All</a>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="section-tight">
+    <div class="container split-banner">
+      <div class="offer-card dark">
+        <span class="glyph">%</span>
+        <span class="tag tag-gold" style="margin-bottom:14px;width:fit-content;">Limited Time</span>
+        <h3>Up to 30% Off Outerwear</h3>
+        <p>Jackets, hoodies and bombers — marked down for the season change.</p>
+        <a href="shop.html?category=jackets" class="btn btn-gold">Shop Outerwear</a>
+      </div>
+      <div class="offer-card blue">
+        <span class="glyph">NEW</span>
+        <span class="tag tag-blue" style="margin-bottom:14px;width:fit-content;background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.5);">Just Dropped</span>
+        <h3>New Arrivals Weekly</h3>
+        <p>Fresh footwear and accessories added every week — get first access.</p>
+        <a href="shop.html?sort=newest" class="btn btn-dark">Shop New In</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Fan Favorites</span>
+          <h2 class="section-title">Best Sellers</h2>
+        </div>
+        <a href="shop.html?sort=bestseller" class="btn btn-outline">View All</a>
+      </div>
+      <div class="product-grid" id="bestSellerGrid"></div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="section" id="new">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Just In</span>
+          <h2 class="section-title">New Arrivals</h2>
+        </div>
+        <a href="shop.html?sort=newest" class="btn btn-outline">View All</a>
+      </div>
+      <div class="product-grid" id="newArrivalGrid"></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section-tight" style="background:var(--mist);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Customer Love</span>
+          <h2 class="section-title">What Men Are Saying</h2>
+        </div>
+      </div>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Finally a site that doesn't overcomplicate menswear. The hoodie fit was spot on and shipping was quick."</p>
+          <div class="review-person">
+            <div class="avatar-circle">RC</div>
+            <div><b>Rafael C.</b><span>Verified Buyer</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Bought the field jacket and two tees — quality feels well above the price point. Reordering already."</p>
+          <div class="review-person">
+            <div class="avatar-circle">DK</div>
+            <div><b>Daniel K.</b><span>Verified Buyer</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★☆</div>
+          <p>"Sneakers run true to size, checkout was easy and I could track my order every step of the way."</p>
+          <div class="review-person">
+            <div class="avatar-circle">OM</div>
+            <div><b>Omar M.</b><span>Verified Buyer</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="newsletter">
+        <div>
+          <h3>Join The List</h3>
+          <p>Early access to drops, member-only discounts, zero spam.</p>
+        </div>
+        <form class="newsletter-form" id="heroNewsletterForm">
+          <input type="email" required placeholder="Enter your email">
+          <button class="btn btn-gold" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/product-images.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

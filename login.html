@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — MENSIFY</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+
+<div id="site-header"></div>
+
+<div class="auth-shell">
+  <div class="auth-visual">
+    <span class="glyph">MF</span>
+    <span class="eyebrow" style="color:var(--gold-soft);">Welcome Back</span>
+    <h2>Good To<br>See You Again.</h2>
+    <p>Sign in to track orders, manage your wishlist and check out faster.</p>
+  </div>
+  <div class="auth-form-wrap">
+    <form class="auth-form" id="loginForm" novalidate>
+      <h1>Login</h1>
+      <p>Enter your details to access your account.</p>
+      <div class="form-msg" id="loginMsg"></div>
+
+      <div class="field" id="fLoginId">
+        <label>Email or Username</label>
+        <input type="text" id="loginId" required>
+        <div class="field-error">Please enter your email or username.</div>
+      </div>
+      <div class="field" id="fLoginPass">
+        <label>Password</label>
+        <div class="pass-wrap">
+          <input type="password" id="loginPassword" required>
+          <button type="button" class="toggle-pass" data-target="loginPassword">👁</button>
+        </div>
+        <div class="field-error">Please enter your password.</div>
+      </div>
+
+      <div class="form-links">
+        <label class="form-check" style="margin:0;"><input type="checkbox" id="rememberMe"> Remember Me</label>
+        <a href="#" id="forgotPassLink">Forgot Password?</a>
+      </div>
+
+      <button class="btn btn-primary btn-block" type="submit">Login</button>
+      <p class="auth-switch">Don't have an account? <a href="signup.html">Create one</a></p>
+      <p class="auth-switch">Are you an admin? <a href="admin.html">Go to Admin Login</a></p>
+    </form>
+  </div>
+</div>
+
+<!-- Forgot password modal -->
+<div class="modal-overlay" id="forgotModal">
+  <div class="modal-box">
+    <button class="modal-close" id="forgotModalClose">✕</button>
+    <h3 class="h-display" style="font-size:26px;">Reset Password</h3>
+    <p class="muted" style="margin-bottom:18px;font-size:13.5px;">Enter the email on your account and we'll set a temporary password you can change after logging in.</p>
+    <div class="field"><label>Email</label><input type="email" id="forgotEmail"></div>
+    <button class="btn btn-dark btn-block" id="forgotSubmitBtn">Send Reset Instructions</button>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="js/product-images.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

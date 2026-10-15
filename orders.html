@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Orders — MENSIFY</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="orders">
+
+<div id="site-header"></div>
+
+<div class="page-banner">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Orders</div>
+    <h1>My Orders</h1>
+    <p>Track every order from placed to delivered.</p>
+  </div>
+</div>
+
+<main class="section-tight">
+  <div class="container">
+    <div class="tabs-row" id="statusTabs">
+      <button data-status="" class="active">All</button>
+      <button data-status="Incoming">Incoming</button>
+      <button data-status="Preparing">Preparing</button>
+      <button data-status="Shipped">Shipped</button>
+      <button data-status="Delivered">Delivered</button>
+      <button data-status="Completed">Completed</button>
+      <button data-status="Rejected">Rejected</button>
+      <button data-status="Cancelled">Cancelled</button>
+    </div>
+
+    <div id="ordersEmpty" class="empty-state" style="display:none;">
+      <span class="glyph">📦</span>
+      <h3>No orders yet</h3>
+      <p>Once you place an order, it will show up here.</p>
+      <a href="shop.html" class="btn btn-dark">Start Shopping</a>
+    </div>
+
+    <div id="ordersList"></div>
+  </div>
+</main>
+
+<!-- Track order modal -->
+<div class="modal-overlay" id="trackModal">
+  <div class="modal-box" style="max-width:520px;">
+    <button class="modal-close" id="trackModalClose">✕</button>
+    <h3 class="h-display" style="font-size:26px;">Track Order</h3>
+    <p class="muted mono" id="trackOrderId" style="margin-bottom:10px;"></p>
+    <div class="track-steps" id="trackSteps"></div>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="js/product-images.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/orders.js"></script>
+</body>
+</html>
